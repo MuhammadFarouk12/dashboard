@@ -66,16 +66,21 @@ a {
     margin-bottom: 40px;
 }
 
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
 .sidebar ul li a {
     display: flex;
     padding: 10px;
     font-size: 14px;
-    margin-top: 15px;
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-    background: var(--grey-alt-color);
+    background: #f59e0b22;;
     border-radius: 10px;
 }
 
@@ -107,7 +112,7 @@ a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        background: black;
+        background: var(--orange-alt-color);
         width: 60%;
         height: 2px;
         bottom: -20px;
@@ -119,7 +124,7 @@ a {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        background: black;
+        background: var(--orange-alt-color);
         width: 10px;
         height: 10px;
         bottom: -24px;
@@ -350,11 +355,12 @@ a {
 .latest-news img {
     width: 100px;
 }
-.latest-news .box > span {
-    margin: 0px;
-}
 @media (max-width: 767px) {
     .latest-news .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .latest-news .box h3 {
         flex-direction: column;
     }
     .latest-news .box .pic {
@@ -362,6 +368,9 @@ a {
     }
     .latest-news .box .pic h3 {
         margin: 0;
+    }
+    .latest-news .box span {
+        margin-top: 10px;
     }
 }
 
@@ -388,6 +397,22 @@ a {
 /* Start Latest Updates */
 .latest-updates img {
     width: 40px;
+}
+@media (max-width: 767px) {
+    .latest-updates img {
+        width: 20px;
+    }
+    .latest-updates h3 {
+        font-size: .8rem;
+    }
+    .latest-updates .box span {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 3px 5px;
+    }
+    .latest-updates .pic {
+        gap: 10px;
+    }
 }
 /* End Latest Updates */
 /* Start Latest Projects */
@@ -460,9 +485,6 @@ a {
 }
 /* End Reminders */
 /* Start Latest Post */
-.latest-post {
-    
-}
 .latest-post img {
     width: 60px;
     margin: 0 0 10px;
@@ -473,21 +495,9 @@ a {
 /* End Latest Post */
 
 /* Start Social Media Stats */
-.social {
-    
-}
-
-.social .links {
-
-}
-
 .social .links .site {
     background: var(--bg-color);
     height: 60px;
-}
-
-.social .links .site .brand {
-
 }
 
 .social .links .site .brand .icon {
