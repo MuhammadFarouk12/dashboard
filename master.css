@@ -15,7 +15,6 @@ font-family: 'Open Sans', sans-serif; */
 
 * {
     box-sizing: border-box;
-    overflow: normal;
 }
 *:focus {
     outline: none;
@@ -57,7 +56,7 @@ a {
     box-shadow: #ddd 3px 3px 20px;
     z-index: 1;
     position: sticky;
-    left: 0;
+    left: 0px;
     top: 0;
     height: 100vh;
 }
@@ -128,6 +127,9 @@ a {
     }
 }
 /* Start Content */
+.content {
+    overflow-x: hidden;
+}
 .content .head {
     padding: 20px;
     box-shadow: var(--grey-alt-color) 3px 3px 20px;
@@ -229,7 +231,9 @@ a {
 
 @media (max-width: 767px) {
     .wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        display: flex !important;
+        width: 100%;
+        flex-direction: column;
     }
     .wrapper .welcome img[alt="my picture"] {
         margin-left: auto;
@@ -511,16 +515,12 @@ a {
 }
 /* End Social Media Stats */
 /* Start Projects */
-.projects {
-    grid-column: 1/3;
-    overflow-x: scroll;
+.r-table{
+    overflow-x: auto;
 }
 .projects table {
-    border-spacing: 0;
+    border-spacing: 0px;
     min-width: 1000px;
-}
-.projects table td {
-    padding: 20px 30px;
 }
 .projects table thead {
     font-weight: bold;
@@ -529,11 +529,12 @@ a {
     background: #eee;
     border-bottom: 1px solid #ddd;
 }
-.projects table tbody {
-    
-}
+
 .projects table tbody tr {
     transition: .3s;
+}
+.projects table td {
+    padding: 20px;
 }
 .projects table tbody tr:hover {
     background: #eee5;
