@@ -256,10 +256,6 @@ a {
 /* End Welcome */
 
 /* Start Quick Draft */
-.quick-draft textarea {
-    height: 200px;
-    resize: none;
-}
 /* End Quick Draft */
 
 /* Start Yearly Targets */
@@ -554,3 +550,45 @@ a {
     border-bottom: 1px solid #ddd;
 }
 /* End Projects */
+/* Start Site Control */
+#E-mail {
+    cursor: no-drop;
+}
+.change {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* End Site Control */
+
+/* Start Server */
+label:has(.server) {
+    border: 2px solid var(--grey-color);
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    form:has(.server) {
+        display: block;
+    }
+    label:has(.server) {
+        display: block;
+    }
+}
+
+label:has(.server) input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10000000000000;
+    margin: 0;
+    cursor: pointer;
+}
+
+label:has(input[name="server"]:checked) {
+    border-color: var(--orange-color);
+    color: var(--orange-color)
+}
+/* End Server */

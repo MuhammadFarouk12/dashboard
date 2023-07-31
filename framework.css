@@ -6,15 +6,16 @@
 h1 {
     margin: 15px;
     margin-bottom: 25px;
+    width: fit-content;
 }
 h1::after {
     content: "";
     position: absolute;
-    width: 120px;
+    width: 100%;
     bottom: -10px;
     left: 0;
     height: 3px;
-    background: linear-gradient(to right, num fs-md black 40%, var(--orange-color) 40%);
+    background: linear-gradient(to right, black 40%, var(--orange-color) 40%);
 }
 .btn {
     padding: 7px 15px;
@@ -26,6 +27,145 @@ h1::after {
     margin-left: auto;
     display: block;
 }
+/* 
+    <label class="check-label">
+        <input class="checkbox" type="checkbox" />
+        <div class="toggle"></div>
+    </label>
+*/
+label:has(input.checkbox) {
+    transition: .3s;
+    width: 80px;
+    height: 30px;
+    background: var(--orange-color);
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.toggle {
+    width: 30px;
+    height: 20px;
+    border-radius: 1000px;
+    color: var(--orange-color);
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: .3s;
+    text-align: center;
+    line-height: 20px;
+}
+
+.toggle::before {
+    content: "\f560";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+}
+/* Start Checkbox 2 */
+
+label.checkbox2 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+label.checkbox2 .toggle2 {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--orange-alt-color);
+    text-align: center;
+    line-height: 18px;
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+label.checkbox2:hover .toggle2 {
+    border-color: var(--orange-color)
+}
+
+label.checkbox2 .toggle2::before {
+    transition: .3s;
+    transform: scale(0) rotate(360deg);
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    background: var(--orange-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+label.checkbox2 input:checked + .toggle2::before {
+    transform: scale(1) rotate(0deg);
+}
+
+label.checkbox2 input:checked + .toggle2 {
+    border-color: var(--orange-color)
+}
+
+
+/* End Checkbox 2 */
+
+/* Start Radio */
+label:has(.radio-container) {
+    cursor: pointer;
+}
+.radio-container {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--grey-color);
+    border-radius: 100px;
+    transition: .3s;
+}
+.radio-container::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--grey-color);
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .3s;
+}
+.radio-container:has(input:checked) {
+    border-color: var(--orange-color);
+}
+.radio-container:has(input:checked)::before {
+    background: var(--orange-color);
+    transform: translate(-50%, -50%) scale(1);
+}
+/* End Radio */
+input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input.checkbox:checked + div {
+    left: calc(100% - 35px);
+    color: var(--grey-color);
+}
+label.check-label:has(input:checked) {
+    background: var(--grey-color);
+}
+
+input:checked + div::before {
+    content: "\f00d";
+}
+
 .unset-cursor {
     cursor: unset;
 }
@@ -42,6 +182,22 @@ h1::after {
 }
 .inpt:focus {
     outline: 4px solid var(--grey-alt-color);
+}
+.inpt2 {
+    padding: 10px;
+    border: 1px solid black;
+    transition: outline 0s, width .3s;
+    border-radius: 5px;
+    /* background: var(--grey-alt-color); */
+    margin-bottom: 10px;
+}
+.inpt2:focus {
+    outline: 4px solid var(--grey-alt-color);
+}
+
+textarea {
+    resize: none;
+    height: 200px;
 }
 
 .borders > :not(:last-child):not(:last-child) {
@@ -287,6 +443,9 @@ h1::after {
 .bold {
     font-weight: bold;
 }
+.n-bold {
+    font-weight: normal;
+}
 /* end colors and box-model */
 
 /* Start media queries */
@@ -338,3 +497,29 @@ img.layer:hover {
     z-index: 100;
 }
 /* End media queries */
+/* Start Social Info */
+.social-info form div {
+    flex-direction: row-reverse;
+    border: 1px solid var(--grey-color);
+    overflow: hidden;
+}
+
+.social-info form input {
+    padding-left: 10px;
+    border: none;
+    border-left: 1px solid var(--grey-color);
+}
+
+.social-info form div input:focus + i {
+    color: black;
+}
+
+.social-info form div i {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 100%;
+    line-height: 50px;
+    transition: .3s;
+}
+/* End Social Info */
