@@ -115,6 +115,9 @@ label.checkbox2 input:checked + .toggle2 {
     border-color: var(--orange-color)
 }
 
+input.checkbox2 {
+    position: absolute;
+}
 
 /* End Checkbox 2 */
 
@@ -201,11 +204,11 @@ textarea {
 }
 
 .borders > :not(:last-child):not(:last-child) {
-    border-bottom: 1px var(--grey-color) solid;
+    border-bottom: 1px var(--grey-alt-color) solid;
 }
 .border {
-    border-bottom: 1px var(--grey-color) solid;
-    border-top: 1px var(--grey-color) solid;
+    border-bottom: 1px var(--grey-alt-color) solid;
+    border-top: 1px var(--grey-alt-color) solid;
 }
 /* End Components */
 
@@ -327,6 +330,11 @@ textarea {
 .m-0 {
     margin: 0;
 }
+
+.m-10 {
+    margin: 10px;
+}
+
 .m-20 {
     margin: 20px;
 }
@@ -464,6 +472,10 @@ textarea {
     }
     .center-in-mobile {
         text-align: center;
+    }
+    .m-center-in-mobile {
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 

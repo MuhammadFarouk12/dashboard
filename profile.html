@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="framework.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="page d-flex">
+        <!-- Start Sidebar -->
+        <div class="sidebar bg-white fopen">
+            <h3 class="txt-c mc">MFK</h3>
+            <ul class="r-ul">
+                <li><a href="index.html" class="mac"><i class="fa-solid fa-chart-column fa-fw"></i><span class="hide-in-mobile">Dashboard</span></a></li>
+                <li><a href="settings.html" class="mac"><i class="fa-solid fa-gear fa-fw"></i><span class="hide-in-mobile">Settings</span></a></li>
+                <li><a href="profile.html" class="mac active"><i class="fa-solid fa-user fa-fw"></i><span class="hide-in-mobile">Profile</span></a></li>
+                <li><a href="projects.html" class="mac "><i class="fa-solid fa-list-check fa-fw"></i><span class="hide-in-mobile">Projects</span></a></li>
+                <li><a href="courses.html" class="mac "><i class="fa-solid fa-tv fa-fw"></i><span class="hide-in-mobile">Courses</span></a></li>
+                <li><a href="friends.html" class="mac "><i class="fa-solid fa-user-group fa-fw"></i><span class="hide-in-mobile">Friends</span></a></li>
+                <li><a href="files.html" class="mac "><i class="fa-solid fa-folder fa-fw"></i><span class="hide-in-mobile">Files</span></a></li>
+                <li><a href="plans.html" class="mac "><i class="fa-solid fa-map fa-fw"></i><span class="hide-in-mobile">Plans</span></a></li>
+            </ul>
+        </div>
+        <!-- End Sidebar -->
+        <div class="content fw">
+            <!-- Start Head -->
+            <div class="head bg-white d-flex f-center f-s-b">
+                <div class="search">
+                    <input placeholder="Type Keywords" type="search" name="main-search" id="main-search" class="rad-10">
+                </div>
+                <div class="icons d-flex f-y-center">
+                    <i class="fa-solid fa-bell fa-fw"></i>
+                    <img src="imgs/avatar.png" alt="Avatar" srcset="">
+                </div>
+            </div>
+            <!-- End Head -->
+            <div class="profile-page fopen p-20">
+                <h1 class="po-relative">Profile</h1>
+                <div class="overview bg-white p-20 rad-10 d-flex f-y-center gap-20">
+                    <div class="bio txt-c p-20">
+                        <img src="imgs/avatar.png" alt="Muhammad Farouk Pic">
+                        <h3 class="fs-md n-bold m-t10">Muhammad Farouk</h3>
+                        <h5 class="m-10">Level 20</h5>
+                        <div class="bar"></div>
+                        <div class="icons m-t10 m-b10 mc fs-sml">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h6 class="m-0 n-bold grey">430 Ratings</h6>
+                    </div>
+                    <div class="info borders full-mobile fs-sml">
+                        <div class="box d-flex f-wrap">
+                            <h3 class="m-0">General Information</h3>
+                            <div><span class="grey">Full Name: </span><span>Muhammad Farouk</span></div>
+                            <div><span class="grey">Gender: </span><span>Male</span></div>
+                            <div><span class="grey">Country: </span><span>Egybt</span></div>
+                            <div class="">
+                                <label class="m-center-in-mobile checkbox2">
+                                    <input class="checkbox2" type="checkbox" checked/>
+                                    <div class="toggle2"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box d-flex f-wrap">
+                            <h3 class="m-0">Personal Information</h3>
+                            <div><span class="grey">Email: </span><span>Muhammad12Fk@gmail.com</span></div>
+                            <div><span class="grey">Phone: </span><span>+967 712 636 375</span></div>
+                            <div><span class="grey">Date of Birth: </span><time datetime="2006-03-07">2006/03/07</time></div>
+                            <div>
+                                <label class="m-center-in-mobile checkbox2">
+                                    <input class="checkbox2" type="checkbox" />
+                                    <div class="toggle2"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box d-flex f-wrap">
+                            <h3 class="m-0">Job Information</h3>
+                            <div><span class="grey">Title: </span><span>Full Stack Developer</span></div>
+                            <div><span class="grey">Programming Language: </span><span>Python</span></div>
+                            <div><span class="grey">Years of Experience: </span><span>5+</span></div>
+                            <div>
+                                <label class="m-center-in-mobile checkbox2">
+                                    <input class="checkbox2" type="checkbox" checked/>
+                                    <div class="toggle2"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box d-flex f-wrap">
+                            <h3 class="m-0">Billing Information</h3>
+                            <div><span class="grey">Payment Method: </span><span>Western Uinon</span></div>
+                            <div><span class="grey">Email: </span><span>email@website.com</span></div>
+                            <div><span class="grey">Subscription: </span><span>Monthly</span></div>
+                            <div>
+                                <label class="m-center-in-mobile checkbox2">
+                                    <input class="checkbox2" type="checkbox" />
+                                    <div class="toggle2"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-actvities d-flex gap-20 block-mobile">
+                    <div class="skills bg-white m-t20 p-20 rad-10">
+                        <h2 class="m-0">My Skills</h2>
+                        <h3 class="n-bold grey fs-md">Complete Skills List</h3>
+                        <div class="skills-list borders center-in-mobile">
+                            <div>
+                                <span>HTML</span>
+                                <span>Pugjs</span>
+                                <span>HAML</span>
+                            </div>
+                            <div>
+                                <span>Css</span>
+                                <span>SASS</span>
+                                <span>Stylus</span>
+                            </div>
+                            <div>
+                                <span>Javascript</span>
+                                <span>Typescript</span>
+                            </div>
+                            <div>
+                                <span>Vuejs</span>
+                                <span>Reactjs</span>
+                            </div>
+                            <div>
+                                <span>Jest</span>
+                                <span>Jasmine</span>
+                            </div>
+                            <div>
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                            </div>
+                            <div>
+                                <span>Python</span>
+                                <span>Django</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actvities bg-white m-t20 p-20 rad-10">
+                        <h2 class="m-0">Latest Activities</h2>
+                        <h3 class="n-bold grey fs-md">Latest Activities Done By The User</h3>
+                        <div class="borders">
+                            <div class="activity block-mobile center-in-mobile p-t20 p-b20 d-flex gap-10">
+                                <img src="imgs/activity-01.png" alt="A store">
+                                <div class="details fw">
+                                    <div class="d-flex block-mobile f-s-b"><span>Store</span><time datetime="18:10">18:10</time></div>
+                                    <div class="d-flex block-mobile m-t10 f-s-b grey"><span>Bought The Mastering Python Course</span><span>Yesterday</span></div>
+                                </div>
+                            </div>
+                            <div class="activity block-mobile center-in-mobile p-t20 p-b20 d-flex gap-10">
+                                <img src="imgs/activity-02.png" alt="An Academy">
+                                <div class="details fw">
+                                    <div class="d-flex block-mobile f-s-b"><span>Academy</span><time datetime="16:05">16:05</time></div>
+                                    <div class="d-flex block-mobile m-t10 f-s-b grey"><span>Got The PHP Certificate</span><span>Yesterday</span></div>
+                                </div>
+                            </div>
+                            <div class="activity block-mobile center-in-mobile p-t20 p-b20 d-flex gap-10">
+                                <img src="imgs/activity-03.png" alt="Checked">
+                                <div class="details fw">
+                                    <div class="d-flex block-mobile f-s-b"><span>Badges</span><time datetime="18:05">18:05</time></div>
+                                    <div class="d-flex block-mobile m-t10 f-s-b grey"><span>Bought The Mastering Python Course</span><span>Yesterday</span></div>
+                                </div>
+                            </div>
+                            <div class="activity block-mobile center-in-mobile p-t20 p-b20 d-flex gap-10">
+                                <img src="imgs/activity-01.png" alt="A store">
+                                <div class="details fw">
+                                    <div class="d-flex block-mobile f-s-b"><span>Store</span><time datetime="18:10">18:10</time></div>
+                                    <div class="d-flex block-mobile m-t10 f-s-b grey"><span>Bought The Mastering Python Course</span><span>Yesterday</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
