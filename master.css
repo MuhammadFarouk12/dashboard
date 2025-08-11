@@ -695,5 +695,26 @@ label:has(input[name="server"]:checked) {
     height:60px;
 }
 
+body:has(.not-found) {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family:'Cairo', sans-serif;
+  color: var(--orange-color);
+}
+.not-found {
+  position: absolute;
+}
+.not-found::before{
+  content: "404";
+  color: inherit;
+  position: absolute; 
+  bottom: 50px;
+  font-size: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* End Actvities */
 /* End Profile Page */
